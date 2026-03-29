@@ -1,13 +1,16 @@
-import { Card } from "@/components/Card";
-import { randomColor } from "@/lib/colors";
+import { getRandomColor } from "@/lib/colors";
+
+// import { Preview } from "@/components/screens/Preview";
+import { Game } from "@/components/screens/Game";
 
 export default function Home() {
-  const rgb = randomColor();
+  // const color = getRandomColor();
+  const defaultColor = getRandomColor();
+
   return (
     <main className="flex justify-center items-center min-h-dvh">
-      <Card round={1} maxRounds={5} rgb={rgb}>
-        Card
-      </Card>
+      {/* <Preview color={color} /> */}
+      <Game defaultColor={defaultColor} />
     </main>
   );
 }

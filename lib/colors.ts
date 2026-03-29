@@ -1,17 +1,13 @@
-const getColorValue = () => {
-  return Math.floor(Math.random() * 255);
+export type HSL = { h: number; s: number; l: number };
+
+const getColorValue = (max: number) => {
+  return Math.floor(Math.random() * max);
 };
 
-export type RGB = { r: number; g: number; b: number };
-
-export const randomColor = (): RGB => {
-  const r = getColorValue();
-  const g = getColorValue();
-  const b = getColorValue();
-
+export const getRandomColor = (): HSL => {
   return {
-    r,
-    g,
-    b,
+    h: getColorValue(360),
+    s: getColorValue(100),
+    l: getColorValue(100),
   };
 };

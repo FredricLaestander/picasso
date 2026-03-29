@@ -6,10 +6,8 @@ export const RoundCount = ({
   maxRounds: number;
 }) => {
   return (
-    <div className="flex">
-      <p className="text-sm">
-        {round} / {maxRounds}
-      </p>
+    <div className="flex text-sm invert-1 mix-blend-difference">
+      {round} / {maxRounds}
     </div>
   );
 };
